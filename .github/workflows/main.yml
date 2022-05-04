@@ -28,7 +28,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           username: johnybill
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: ${{ secrets.salut }}
       
       - name: Set outputs
         id: vars
@@ -43,7 +43,7 @@ jobs:
           # relative path to the place where source code with Dockerfile is located
           context: .
           # Note: tags has to be all lower-case
-          tags: johnybill/hetic-data:${{ steps.vars.outputs.sha_short }}
+          tags: johnybill/htest-dev-ops:${{ steps.vars.outputs.sha_short }}
           # build on feature branches, push only on main branch
           push: true # ${{ github.ref == 'refs/heads/main' }}
 
