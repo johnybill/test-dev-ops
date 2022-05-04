@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # steps to perform in job
-    steps:
+    steps: 
       - name: Checkout code
         uses: actions/checkout@v2
 
